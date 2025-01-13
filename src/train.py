@@ -64,7 +64,7 @@ class ProjectAgent:
 
     def load(self):
         device = torch.device('cpu')
-        self.path = os.getcwd() +"src/trained_model.pkl"
+        self.path = os.getcwd() +"/src/trained_model.pkl"
         self.model = self.myDQN(device)
         self.model.load_state_dict(torch.load(self.path, map_location=device))
         self.model.eval()
